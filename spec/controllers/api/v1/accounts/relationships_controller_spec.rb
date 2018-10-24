@@ -32,7 +32,7 @@ describe Api::V1::Accounts::RelationshipsController do
         json = body_as_json
 
         expect(json).to be_a Enumerable
-        expect(json.first[:following]).to be_truthy
+        expect(json.first[:following]).to be true
         expect(json.first[:followed_by]).to be false
       end
     end
